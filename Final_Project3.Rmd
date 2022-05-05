@@ -55,6 +55,9 @@ The dataset was last updated 4 months ago, so some of the values may have change
 * `Patronus`: The patronus spirt gardiun for each character(Stag, Doe, Cat, Jack Russell Terrier,Otter, ect)
 * `'Wand (Wood)`: wood type for each characters wand(Yew,Cherry,Holly,Vine and Elder)
 * `'Wand (Core)`: core type of each charcters wand(Dragon Heartstring,Unicorn Hair,Phoenix Feather,Thestral Tail Hair, etc))
+
+##
+
 ```{r}
 Characters <- read_csv("data/Characters.csv")
 glimpse(Characters)
