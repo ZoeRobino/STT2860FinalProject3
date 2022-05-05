@@ -34,11 +34,7 @@ I need scales to format a percentage axis.
 library(scales)
 ```
 
-why?
 
-```{r, echo = TRUE}
-library(packcircles)
-```
 
 
 
@@ -53,14 +49,15 @@ The dataset was last updated 4 months ago, so some of the values may have change
 
 * `'Character ID'`: Assigned id number for each character 
 * `'Character Name'`: Character names from all Harry Potter movies 
-* `Species`: Characters creature type in Harry Potter movie(Human,Ghost,Centaur,Half-Human/Half-Giant, Werewolf, etc)
+* `Species`: Characters creature type in Harry Potter movie(Human,Ghost,Centaur, Half-Human/Half-Giant, Werewolf, etc)
 * `Gender`: The gender for each character (Female/Male)
+
 ## 
+
 * `House`: The sorted house for each charcter(Gryffindor, Slytherin, Ravenclaw, Hufflepuff,Beauxbatons Academy of Magic and Durmstrang Institute)
 * `Patronus`: The patronus spirt gardiun for each character(Stag, Doe, Cat, Jack Russell Terrier,Otter, ect)
 * `'Wand (Wood)`: wood type for each characters wand(Yew,Cherry,Holly,Vine and Elder)
-* `'Wand (Core)`: core type of each charcters wand(Dragon Heartstring,Unicorn                          Hair,Phoenix Feather,Thestral Tail Hair, etc))
-
+* `'Wand (Core)`: core type of each charcters wand(Dragon Heartstring,Unicorn Hair,Phoenix Feather,Thestral Tail Hair, etc))
 ```{r}
 Characters <- read_csv("data/Characters.csv")
 glimpse(Characters)
@@ -93,8 +90,9 @@ my_table1 <- table(Characters$Species)
 ggplot(data=subset(Characters, !is.na(House)), aes(x = frequency(Species), y = Species,fill = House)) +
   geom_col()+
   facet_grid(.~House)+
-  labs(x = "Frequency", y = "Ratings", title = "Frequency of Movie and TV Shows by Ratings on Disney+") + 
+  labs(x = "Frequency", y = "Species", title = "Frequency of Species in each House") + 
   theme(plot.title = element_text(hjust = 0.5))
+
 ```
 
 
