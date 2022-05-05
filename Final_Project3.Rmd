@@ -22,11 +22,8 @@ I used tidyverse for data manipulation and plotting.
 library(tidyverse)
 ```
 
-I need mapdata to plot on a map of the United States.
 
-```{r, echo = TRUE}
-library(mapdata)
-```
+
 
 I need scales to format a percentage axis.
 
