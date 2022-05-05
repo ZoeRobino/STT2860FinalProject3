@@ -31,7 +31,15 @@ I need scales to format a percentage axis.
 library(scales)
 ```
 
+To open and read files
+```{r, echo = TRUE}
+library(readr)
+```
 
+For my first visual 
+```{r, echo = TRUE}
+library(treemap)
+```
 
 
 
@@ -66,7 +74,6 @@ glimpse(Characters)
 ##
 
 ```{r, fig.align = "center", fig.width = 7.5}
-library(treemap)
  house <- c(Characters$House)
 names <- c(Characters$`Character ID`)
 subgroup<-frequency(data)
